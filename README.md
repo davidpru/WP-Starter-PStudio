@@ -1,5 +1,5 @@
 # WP Starter PStudio
-Theme base en blanco para Wordpress con Bootstrap 4 sin cdn. Pensado para iniciar proyectos a medida rápidamente.
+Theme base en blanco para Wordpress con Bootstrap 4 sin cdn. Pensado para iniciar proyectos a medida rápidamente y subirlos a través de ftp.
 
 ## Características
 * Bootstrap 4.1.1
@@ -18,6 +18,11 @@ Theme base en blanco para Wordpress con Bootstrap 4 sin cdn. Pensado para inicia
 * Navigation Walker
 * Post thumbnails
 * Widgets
-  * Iniciado 1 widget para **Blog Sidebar**
-  * Iniciado 4 widget2 para **Footer**
-* Deregister script **jquery**
+  * Iniciado (1) widget para Blog Sidebar
+  * Iniciado (4) widget para Footer
+* Deregister script jquery
+
+
+## Instrucciones
+1 Clonar o descargar repositorio
+2 Hard work!!!
