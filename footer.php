@@ -2,8 +2,6 @@
 <?php wp_footer(); ?>
 <!-- Wp automatic footer -->
 
-<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800|Open+Sans:400,400i,700,700i" rel="stylesheet">
-
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
