@@ -27,6 +27,7 @@
     <!-- Automatic Wordpress ////////////////////////////////// -->
     <?php wp_head(); ?>
     <!-- Automatic Wordpress ////////////////////////////////// -->
+    
   </head>
 
 <body <?php body_class(); ?>>
