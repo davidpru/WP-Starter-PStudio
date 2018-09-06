@@ -27,4 +27,4 @@ Theme base en blanco para Wordpress con Bootstrap 4 sin cdn. Pensado para inicia
 2. Hard work!!!
 
 ## Screenshot theme
-(https://raw.githubusercontent.com/davidpru/WP-Starter-PStudio/master/screenshot.png)
+![Theme Screenshot](https://raw.githubusercontent.com/davidpru/WP-Starter-PStudio/master/screenshot.png)
