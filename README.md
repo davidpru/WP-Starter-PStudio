@@ -22,6 +22,13 @@ Theme base en blanco para Wordpress con Bootstrap 4 sin cdn. Pensado para inicia
   * Iniciado (4) widget para Footer
 * Deregister script jQuery
 
+### Soporte Woocommerce
+* Soporte woocommerce
+* woocommerce.php
+* Surprimido "añadir a cesta" en listado de productos
+* Lightbox para página de producto
+* Modificador de productos por página
+
 ## Instrucciones
 1. Clonar o descargar el repositorio
 2. Hard work!!!
