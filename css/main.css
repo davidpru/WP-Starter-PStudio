@@ -1,0 +1,22 @@
+:root {
+  --verd: #36b394;
+  --turquesa: #1eb9c8;
+  --blau: #00b9eb;
+  --gris: #717171;
+  --negre: #3c3c3c;
+  --blanc: #fff;
+	--clar: #f6f8fb;
+  --deg: linear-gradient(135deg, rgba(54,179,148,1) 0%, rgba(0,184,235,1) 100%);
+
+}
+
+
+body {
+    background-color: var(--blanc);
+    color: var(--gris);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 { font-family: Montserrat !important; }
