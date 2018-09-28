@@ -2,7 +2,7 @@
 Theme base en blanco para Wordpress con Bootstrap 4 sin cdn. Pensado para iniciar pequeños proyectos a medida rápidamente y subirlos a través de ftp.
 
 ## Características
-* Bootstrap 4.1.1
+* Bootstrap 4.1.3
 * jQuery 3.3.1
 * Popper 1.14.3
 * Fontawsome 5 (Open)
