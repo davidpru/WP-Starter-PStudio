@@ -11,8 +11,8 @@ David Pruñonosa
 * jQuery 3.3.1
 * Popper 1.14.3
 * Fontawsome 5 (Open)
-* Menús con [Bootstrap Navwalker](https://github.com/wp-bootstrap/wp-bootstrap-navwalker)
-* [Aos](https://github.com/michalsnik/aos) Animate on scroll library
+* Menús con [Bootstrap Navwalker](https://github.com/wp-bootstrap/wp-bootstrap-navwalker) @wp-bootstrap
+* [Aos](https://github.com/michalsnik/aos) Animate on scroll library @michalsnik
 
 
 ## Características Wordpress
