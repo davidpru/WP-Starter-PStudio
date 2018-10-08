@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang="es">
+<html <?php language_attributes(); ?>>
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/img/favicon.png" type="image/x-icon">
 

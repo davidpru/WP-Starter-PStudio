@@ -21,7 +21,7 @@ add_action( 'widgets_init', 'theme_slug_widgets_init' );
 function theme_slug_widgets_init() {
 
 /* Blog ---------------------- */
-    register_sidebar( array(
+  register_sidebar( array(
     'name' => __( 'Blog', 'theme-slug' ),
     'id' => 'sidebar-blog',
     'description' => __( 'Widgets disponibles en el blog', 'theme-slug' ),
@@ -31,8 +31,19 @@ function theme_slug_widgets_init() {
     'after_title'   => '</h4>',
     ) );
 
+/* Page ---------------------- */
+  register_sidebar( array(
+    'name' => __( 'Page', 'theme-slug' ),
+    'id' => 'sidebar-page',
+    'description' => __( 'Widgets disponibles en el blog', 'theme-slug' ),
+    'before_widget' => '<section id="%1$s" class="widget widget-auto %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h4 class="widgettitle">',
+    'after_title'   => '</h4>',
+    ) );
+
 /* Footer ---------------------- */
-    register_sidebar( array(
+  register_sidebar( array(
     'name' => __( 'Footer 1', 'theme-slug' ),
     'id' => 'sidebar-footer1',
     'description' => __( 'Widgets disponibles en el blog', 'theme-slug' ),
@@ -42,7 +53,7 @@ function theme_slug_widgets_init() {
     'after_title'   => '</h4>',
     ) );
 
-    register_sidebar( array(
+  register_sidebar( array(
     'name' => __( 'Footer 2', 'theme-slug' ),
     'id' => 'sidebar-footer2',
     'description' => __( 'Widgets disponibles en el blog', 'theme-slug' ),
@@ -52,7 +63,7 @@ function theme_slug_widgets_init() {
     'after_title'   => '</h4>',
     ) );
 
-    register_sidebar( array(
+  register_sidebar( array(
     'name' => __( 'Footer 3', 'theme-slug' ),
     'id' => 'sidebar-footer3',
     'description' => __( 'Widgets disponibles en el blog', 'theme-slug' ),
@@ -62,7 +73,7 @@ function theme_slug_widgets_init() {
     'after_title'   => '</h4>',
     ) );
 
-    register_sidebar( array(
+  register_sidebar( array(
     'name' => __( 'Footer 4', 'theme-slug' ),
     'id' => 'sidebar-footer4',
     'description' => __( 'Widgets disponibles en el blog', 'theme-slug' ),
@@ -120,6 +131,69 @@ function new_loop_shop_per_page( $cols ) {
   $cols = 20;
   return $cols;
 }
+
+
+// Personalizador wordpress
+// --------------------------------------------------------------------------
+
+
+function theme_customize_register( $wp_customize ) {
+
+
+  $wp_customize->add_panel( 'servicios', array(
+  'title' => __( 'Servicios', 'textdomain' ),
+  'description' => __( 'Aqui podemos mostrar un mensaje', 'textdomain' ),
+  'priority' => 160,
+  'capability' => 'edit_theme_options',
+  ));
+
+    $wp_customize->add_section( 'primera_seccion' , array(
+    'title' => __( 'Primera Seccion', 'textdomain' ),
+    'panel' => 'servicios',
+    'priority' => 1,
+    'capability' => 'edit_theme_options',
+    ));
+
+      //Campo de texto
+      $wp_customize->add_setting( 'campo_texto', array(
+      'type' => 'theme_mod',
+      'capability' => 'edit_theme_options',
+      ));
+
+      $wp_customize->add_control('campo_texto', array(
+      'label' => __( 'Ejemplo input', 'textdomain' ),
+      'section' => 'primera_seccion',
+      'priority' => 1,
+      'type' => 'text',
+      ));
+
+      //Campo textarea
+      $wp_customize->add_setting( 'campo_textarea', array(
+      'type' => 'theme_mod',
+      'capability' => 'edit_theme_options',
+      ));
+
+      $wp_customize->add_control('campo_textarea', array(
+      'label' => __( 'Ejemplo textarea', 'textdomain' ),
+      'section' => 'primera_seccion',
+      'priority' => 1,
+      'type' => 'textarea',
+      ));
+
+
+
+
+}
+add_action( 'customize_register', 'theme_customize_register' );
+
+
+
+
+
+
+
+
+
 
 
 
