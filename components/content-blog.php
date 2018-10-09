@@ -17,4 +17,7 @@
     <?php edit_post_link( __( 'Edit') ); ?>
   </footer> <?php ?>
 
+  <?php comments_template(); ?> 
+
+
 </article>

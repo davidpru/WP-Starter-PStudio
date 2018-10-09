@@ -10,7 +10,7 @@
       <div class="col-md-8">
         <?php if (have_posts()) : ?>
           <?php while (have_posts()) : the_post(); ?>
-            <?php get_template_part('content-blog'); ?>
+            <?php get_template_part('components/content-blog'); ?>
           <?php endwhile; ?>
             <div class="navigation">
                 <div class="alignleft"><?php next_posts_link('&laquo; Previous Entries') ?></div>
@@ -21,7 +21,7 @@
       </div>
 
       <aside class="col-md-4">
-        <?php if (!dynamic_sidebar('Page')); ?>
+        <?php if (!dynamic_sidebar('Blog')); ?>
       </aside>
 
     </div>

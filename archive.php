@@ -19,7 +19,7 @@
       </div>
 
       <aside class="col-md-4">
-        <?php if (!dynamic_sidebar('Page')); ?>
+        <?php if (!dynamic_sidebar('Blog')); ?>
       </aside>
 
     </div>
