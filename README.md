@@ -1,10 +1,14 @@
 # WP Starter PStudio
-Theme base en blanco para Wordpress con Bootstrap 4 sin cdn. Pensado para iniciar pequeños proyectos a medida rápidamente y subirlos a través de ftp.
+WP Starter PStudio es la plantilla de inicio que usamos en [nuestro estudio](https://www.usehelvetica.net) para crear temas personalizados. Utiliza Bootstrap 4 y tiene integrado el Bootstrap Navwalker para gestionar la navegación. Funciona con wordpress a partir de la versión 4.
+
+## Importante
+
+Toda la funcionalidad de la plantilla se ajusta a nuestro flujo de trabajo en el estudio. Iniciamos proyectos rápidamente y tenemos a mano todo el código necesario.
 
 ## Autor
 David Pruñonosa
 [Pruñonosa Studio](https://www.usehelvetica.net)
-[@davidfx](https://twitter.com/davidfx?lang=es) 
+[@davidfx](https://twitter.com/davidfx?lang=es)
 
 ## Características
 * Bootstrap 4.1.3
@@ -38,6 +42,8 @@ David Pruñonosa
 
 ## Instrucciones
 1. Clonar o descargar el repositorio
+2. Asignar Template Home a página de inicio
+3. Asignar Template Blog a página de entradas
 2. Hard work!!!
 
 ## Screenshot theme
