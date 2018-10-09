@@ -26,6 +26,7 @@ David Pruñonosa
 * Widgets
   * Iniciado (1) widget para Blog Sidebar
   * Iniciado (4) widget para Footer
+  * Iniciado (1) widget para Páginas
 * Deregister script jQuery
 
 ### Soporte Woocommerce
