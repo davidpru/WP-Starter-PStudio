@@ -17,6 +17,7 @@ David Pruñonosa
 * Fontawsome 5 (Open)
 * Menús con [Bootstrap Navwalker](https://github.com/wp-bootstrap/wp-bootstrap-navwalker) @wp-bootstrap
 * [Aos](https://github.com/michalsnik/aos) Animate on scroll library @michalsnik
+* Gulp.js: Sass y browserSync
 
 
 ## Características Wordpress
