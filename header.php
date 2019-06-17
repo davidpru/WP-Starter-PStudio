@@ -22,15 +22,6 @@
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/dist/css/aos/aos.css">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/style.css">
 
-    <!-- AOS LIBRARY -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <!-- Fontawsome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
-
-    <!-- Google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
-
     <!-- Automatic Wordpress ////////////////////////////////// -->
     <?php wp_head(); ?>
     <!-- Automatic Wordpress ////////////////////////////////// -->

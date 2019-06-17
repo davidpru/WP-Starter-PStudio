@@ -11,13 +11,16 @@ David Pruñonosa
 [@davidfx](https://twitter.com/davidfx?lang=es)
 
 ## Características
-* Bootstrap 4.1.3
+
+Poco a poco vamos dejando de lado la dependencia de bootstrap, en las siguientes versiones desaparecera.
+
 * jQuery 3.3.1
 * Popper 1.14.3
 * Fontawsome 5 (Open)
 * Menús con [Bootstrap Navwalker](https://github.com/wp-bootstrap/wp-bootstrap-navwalker) @wp-bootstrap
 * [Aos](https://github.com/michalsnik/aos) Animate on scroll library @michalsnik
 * Gulp.js: Sass y browserSync
+* Bootstrap 4.1.3
 
 
 ## Características Wordpress
