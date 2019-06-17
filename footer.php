@@ -35,17 +35,13 @@
 
 
 <!-- Jquery + Bootstrap -->
-<script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery/jquery-3.3.1.slim.min.js" ></script>
-<script src="<?php bloginfo('stylesheet_directory'); ?>/js/popper/popper.min.js"></script>
-<script src="<?php bloginfo('stylesheet_directory'); ?>/js/bootstrap/bootstrap.min.js"></script>
+<script src="<?php bloginfo('stylesheet_directory'); ?>/dist/js/jquery/jquery-3.3.1.slim.min.js" ></script>
+<script src="<?php bloginfo('stylesheet_directory'); ?>/dist/js/popper/popper.min.js"></script>
+<script src="<?php bloginfo('stylesheet_directory'); ?>/dist/js/bootstrap/bootstrap.min.js"></script>
+<script src="<?php bloginfo('stylesheet_directory'); ?>/dist/js/aos/aos.js"></script>
 
 <!-- Main, personalizados -->
-<script src="<?php bloginfo('stylesheet_directory'); ?>/js/main.js" charset="utf-8"></script>
-
-<!-- FX AOS.js -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-
+<script src="<?php bloginfo('stylesheet_directory'); ?>/dist/js/main.js" charset="utf-8"></script>
 
 <script>
   AOS.init();

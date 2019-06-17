@@ -4,7 +4,7 @@
 add_theme_support( 'title-tag' );
 
 // Register Custom Navigation Walker
-require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+require_once get_template_directory() . '/components/class-wp-bootstrap-navwalker.php';
 
 // Soporte para post thumbnails
 add_theme_support( 'post-thumbnails' );
@@ -25,9 +25,9 @@ function theme_slug_widgets_init() {
     'name' => __( 'Blog', 'theme-slug' ),
     'id' => 'sidebar-blog',
     'description' => __( 'Widgets disponibles en el blog', 'theme-slug' ),
-    'before_widget' => '<section id="%1$s" class="widget widget-auto %2$s">',
+    'before_widget' => '<section id="%1$s" class="widget widget--name %2$s">',
     'after_widget'  => '</section>',
-    'before_title'  => '<h4 class="widgettitle">',
+    'before_title'  => '<h4 class="widget__title">',
     'after_title'   => '</h4>',
     ) );
 
@@ -35,10 +35,10 @@ function theme_slug_widgets_init() {
   register_sidebar( array(
     'name' => __( 'Page', 'theme-slug' ),
     'id' => 'sidebar-page',
-    'description' => __( 'Widgets disponibles en el blog', 'theme-slug' ),
-    'before_widget' => '<section id="%1$s" class="widget widget-auto %2$s">',
+    'description' => __( 'Widgets para páginas', 'theme-slug' ),
+    'before_widget' => '<section id="%1$s" class="widget widget--name %2$s">',
     'after_widget'  => '</section>',
-    'before_title'  => '<h4 class="widgettitle">',
+    'before_title'  => '<h4 class="widget__title">',
     'after_title'   => '</h4>',
     ) );
 
@@ -46,38 +46,38 @@ function theme_slug_widgets_init() {
   register_sidebar( array(
     'name' => __( 'Footer 1', 'theme-slug' ),
     'id' => 'sidebar-footer1',
-    'description' => __( 'Widgets disponibles en el blog', 'theme-slug' ),
-    'before_widget' => '<section id="%1$s" class="widget widget-auto %2$s">',
+    'description' => __( 'Widgets disponibles en el Footer', 'theme-slug' ),
+    'before_widget' => '<section id="%1$s" class="widget widget--footer %2$s">',
     'after_widget'  => '</section>',
-    'before_title'  => '<h4 class="widgettitle">',
+    'before_title'  => '<h4 class="widget__title">',
     'after_title'   => '</h4>',
     ) );
 
   register_sidebar( array(
     'name' => __( 'Footer 2', 'theme-slug' ),
     'id' => 'sidebar-footer2',
-    'description' => __( 'Widgets disponibles en el blog', 'theme-slug' ),
-    'before_widget' => '<section id="%1$s" class="widget widget-auto %2$s">',
+    'description' => __( 'Widgets disponibles en el Footer', 'theme-slug' ),
+    'before_widget' => '<section id="%1$s" class="widget widget--footer %2$s">',
     'after_widget'  => '</section>',
-    'before_title'  => '<h4 class="widgettitle">',
+    'before_title'  => '<h4 class="widget__title">',
     'after_title'   => '</h4>',
     ) );
 
   register_sidebar( array(
     'name' => __( 'Footer 3', 'theme-slug' ),
     'id' => 'sidebar-footer3',
-    'description' => __( 'Widgets disponibles en el blog', 'theme-slug' ),
-    'before_widget' => '<section id="%1$s" class="widget widget-auto %2$s">',
+    'description' => __( 'Widgets disponibles en el Footer', 'theme-slug' ),
+    'before_widget' => '<section id="%1$s" class="widget widget--footer %2$s">',
     'after_widget'  => '</section>',
-    'before_title'  => '<h4 class="widgettitle">',
+    'before_title'  => '<h4 class="widget__title">',
     'after_title'   => '</h4>',
     ) );
 
   register_sidebar( array(
     'name' => __( 'Footer 4', 'theme-slug' ),
     'id' => 'sidebar-footer4',
-    'description' => __( 'Widgets disponibles en el blog', 'theme-slug' ),
-    'before_widget' => '<section id="%1$s" class="widget widget-auto %2$s">',
+    'description' => __( 'Widgets disponibles en el Footer', 'theme-slug' ),
+    'before_widget' => '<section id="%1$s" class="widget widget--footer %2$s">',
     'after_widget'  => '</section>',
     'before_title'  => '<h4 class="widgettitle">',
     'after_title'   => '</h4>',
@@ -183,13 +183,6 @@ function theme_customize_register( $wp_customize ) {
 
 }
 add_action( 'customize_register', 'theme_customize_register' );
-
-
-
-
-
-
-
 
 
 

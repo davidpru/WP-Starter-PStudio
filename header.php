@@ -17,8 +17,9 @@
     endif; ?>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/main.css">
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/dist/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/dist/css/master.css">
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/dist/css/aos/aos.css">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/style.css">
 
     <!-- AOS LIBRARY -->
