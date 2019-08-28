@@ -41,7 +41,7 @@ gulp.task('sass', function () {
       )
       .pipe(
         autoPrefixer({
-          browsers: ['last 2 versions', 'ie >= 11'],
+          overrideBrowserslist: ['last 2 versions', 'ie >= 11'],
           cascade: false,
         })
       )

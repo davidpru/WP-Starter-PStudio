@@ -9,6 +9,7 @@
   --color-background: rgba(255, 255, 255, 1);
   --font-size: 1rem;
   --font-size-small: calc(--font-size - 20%);
+  --font-weight: 400;
   --box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
   --border-radius: calc(--font-size - 50%);
   --sp-1: calc(var(--font-size) * 3);
@@ -21,7 +22,9 @@
 --------------------------------------------------- */
 body {
   background-color: var(--color-background);
-  font-size: var(--font-size); }
+  font-size: var(--font-size);
+  color: var(--color-gris-dark);
+  font-weight: var(--font-weight); }
 
 /* SCSS Utilidades
 --------------------------------------------------- */
@@ -90,6 +93,9 @@ body {
 
 .bg-primario {
   background-color: var(--color-secundario); }
+
+.bg-gris-light {
+  background-color: var(--color-gris-light); }
 
 /* SCSS Headers
 --------------------------------------------------- */
