@@ -26,5 +26,10 @@
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-sass": "^4.0.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.12",
+    "lodash.template": "^4.5.0",
+    "minimatch": "^3.0.2"
   }
 }
