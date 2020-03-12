@@ -1,40 +1,33 @@
-/* SCSS Utilidades
---------------------------------------------------- */
+.pad-b-min { padding-bottom: $sp-1; }
+.mar-b-min { margin-bottom: $sp-1; }
+.pad-b { padding-bottom: $sp-2; }
+.mar-b { margin-bottom: $sp-2; }
+.pad-b-max { padding-bottom: $sp-3; }
+.mar-b-max { margin-bottom: $sp-3; }
 
-.pad-b-min { padding-bottom: var(--sp-1); }
-.mar-b-min { margin-bottom: var(--sp-1); }
-.pad-b { padding-bottom: var(--sp-2); }
-.mar-b { margin-bottom: var(--sp-2); }
-.pad-b-max { padding-bottom: var(--sp-3); }
-.mar-b-max { margin-bottom: var(--sp-3); }
+.pad-t-min { padding-top: $sp-1; }
+.mar-t-min { margin-top: $sp-1; }
+.pad-t { padding-top: $sp-2; }
+.mar-t { margin-top: $sp-2; }
+.pad-t-max { padding-top: $sp-3; }
+.mar-t-max { margin-top: $sp-3; }
 
-.pad-t-min { padding-top: var(--sp-1); }
-.mar-t-min { margin-top: var(--sp-1); }
-.pad-t { padding-top: var(--sp-2); }
-.mar-t { margin-top: var(--sp-2); }
-.pad-t-max { padding-top: var(--sp-3); }
-.mar-t-max { margin-top: var(--sp-3); }
-
-.pad-min { padding: var(--sp-1) 0; }
-.pad-min { padding: var(--sp-1) 0; }
-.pad { padding: var(--sp-2) 0; }
-.pad { padding: var(--sp-2) 0; }
-.pad-max { padding: var(--sp-3) 0; }
-.pad-max { padding: var(--sp-3) 0; }
-
+.pad-min { padding: $sp-1 0; }
+.pad { padding: $sp-2 0; }
+.pad-max { padding: $sp-3 0; }
 
 .color-primario {
-  background-color: var(--color-principal);
+  background-color: $color-principal;
 }
 .color-secundario {
-  background-color: var(---color-secundario);
+  background-color: $color-secundario;
 }
 .bg-primario {
-  background-color: var(--color-principal);
+  background-color: $color-principal;
 }
 .bg-primario {
-  background-color: var(--color-secundario);
+  background-color: $color-secundario;
 }
 .bg-gris-light {
-  background-color: var(--color-gris-light);
+  background-color: $color-gris-light;
 }
