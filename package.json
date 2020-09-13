@@ -22,16 +22,18 @@
   },
   "homepage": "https://github.com/davidpru/WP-Starter-PStudio#readme",
   "devDependencies": {
-    "browser-sync": "^2.26.0",
+    "browser-sync": "^2.26.12",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-sass": "^4.0.1"
   },
   "dependencies": {
+    "gulp-cli": "^2.3.0",
     "kind-of": "^6.0.3",
     "lodash": "^4.17.15",
     "lodash.template": "^4.5.0",
     "minimatch": "^3.0.4",
-    "minimist": "^1.2.5"
+    "minimist": "^1.2.5",
+    "natives": "^1.1.6"
   }
 }
