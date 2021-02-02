@@ -25,7 +25,8 @@
     "browser-sync": "^2.26.12",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^6.1.0",
-    "gulp-sass": "^4.0.1"
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^3.0.0"
   },
   "dependencies": {
     "gulp-cli": "^2.3.0",
@@ -35,5 +36,18 @@
     "minimatch": "^3.0.4",
     "minimist": "^1.2.5",
     "natives": "^1.1.6"
-  }
+  },
+  "browserslist": [
+    "> 1%",
+    "ie >= 8",
+    "edge >= 15",
+    "ie_mob >= 10",
+    "ff >= 45",
+    "chrome >= 45",
+    "safari >= 7",
+    "opera >= 23",
+    "ios >= 7",
+    "android >= 4",
+    "bb >= 10"
+  ]
 }

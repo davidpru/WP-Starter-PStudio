@@ -3,8 +3,6 @@
 // Soporte para títulos
 add_theme_support( 'title-tag' );
 
-// Register Custom Navigation Walker
-require_once get_template_directory() . '/components/class-wp-bootstrap-navwalker.php';
 
 // Soporte para post thumbnails
 add_theme_support( 'post-thumbnails' );

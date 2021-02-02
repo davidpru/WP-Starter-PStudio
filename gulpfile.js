@@ -3,6 +3,7 @@ var browserSync   = require('browser-sync');
 var reload        = browserSync.reload;
 var autoPrefixer  = require('gulp-autoprefixer');
 var sass          = require('gulp-sass');
+var sourcemaps    = require('gulp-sourcemaps');
 
 
 // browser-sync tarea para lanzar el server .
@@ -22,7 +23,7 @@ gulp.task('browser-sync', function() {
   browserSync.init(files, {
 
   //browsersync with a php server
-  proxy: "http://pstudio.loc/",
+  proxy: "http://starter-theme.loc/",
   notify: false
 
    // server: {
@@ -36,15 +37,17 @@ gulp.task('browser-sync', function() {
 // will auto-update browsers
 gulp.task('sass', function () {
   return gulp.src('./src/scss/*.scss')
+  .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'nested' })
       .on('error', sass.logError)
       )
       .pipe(
         autoPrefixer({
-          overrideBrowserslist: ['last 2 versions', 'ie >= 11'],
+          // overrideBrowserslist: ['last 2 versions', 'ie >= 11'],
           cascade: false,
         })
       )
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('./dist/css/'))
     .pipe(reload({ stream:true }));
 });

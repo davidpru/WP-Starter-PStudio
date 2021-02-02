@@ -35,9 +35,8 @@
 
 
 <!-- Jquery + Bootstrap -->
-<script src="<?php bloginfo('stylesheet_directory'); ?>/dist/js/jquery/jquery-3.3.1.slim.min.js" ></script>
-<script src="<?php bloginfo('stylesheet_directory'); ?>/dist/js/popper/popper.min.js"></script>
-<script src="<?php bloginfo('stylesheet_directory'); ?>/dist/js/bootstrap/bootstrap.min.js"></script>
+<script src="<?php bloginfo('stylesheet_directory'); ?>/dist/js/jquery/jquery-2.2.4.min.js" ></script>
+<script src="<?php bloginfo('stylesheet_directory'); ?>/dist/js/bootstrap/bootstrap.bundle.min.js"></script>
 
 
 <!-- AOS -->
