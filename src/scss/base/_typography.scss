@@ -1,2 +1,63 @@
-/* SCSS Headers
---------------------------------------------------- */
+.header-all {
+  font-weight: $font-weight-bold;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+  line-height: 1.4;
+}
+
+.header-1 {
+  font-size: $header-1;
+  @extend .header-all;
+  @media screen and (max-width: 767px) {
+    font-size: 2.1875rem;
+  }
+}
+.header-2 {
+  font-size: $header-2;
+  @extend .header-all;
+  @media screen and (max-width: 767px) {
+    font-size: 1.875rem;
+  }
+}
+.header-3 {
+  font-size: $header-3;
+  @extend .header-all;
+  @media screen and (max-width: 767px) {
+    font-size: 1.25rem;
+  }
+}
+.header-4 {
+  font-size: $header-4;
+  @extend .header-all;
+}
+.header-5 {
+  font-size: $header-5;
+  @extend .header-all;
+}
+.header-6 {
+  font-size: $header-6;
+  @extend .header-all;
+}
+
+.page-body {
+  p {
+    font-size: $font-size;
+  }
+}
+
+.titulos {
+  margin-bottom: $space-3;
+  &--center {
+    text-align: center;
+  }
+  &--50 {
+    @media screen and (min-width: 992px) {
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  &--light {
+    color: $color-white;
+  }
+}

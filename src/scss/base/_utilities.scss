@@ -1,33 +1,94 @@
-.pad-b-min { padding-bottom: $sp-1; }
-.mar-b-min { margin-bottom: $sp-1; }
-.pad-b { padding-bottom: $sp-2; }
-.mar-b { margin-bottom: $sp-2; }
-.pad-b-max { padding-bottom: $sp-3; }
-.mar-b-max { margin-bottom: $sp-3; }
+.cursor-pointer {
+  cursor: pointer;
+}
 
-.pad-t-min { padding-top: $sp-1; }
-.mar-t-min { margin-top: $sp-1; }
-.pad-t { padding-top: $sp-2; }
-.mar-t { margin-top: $sp-2; }
-.pad-t-max { padding-top: $sp-3; }
-.mar-t-max { margin-top: $sp-3; }
+// Utilitats de colors i backgrounds
+// ------------------------------------------------
+$colors: (
+  "primary" $color-primary,
+  "primary-light" $color-primary-light,
+  "primary-dark" $color-primary-dark,
+  "secondary" $color-secondary,
+  "secondary-light" $color-secondary-light,
+  "secondary-dark" $color-secondary-dark,
+  "accent" $color-accent,
+  "accent-light" $color-accent-light,
+  "accent-dark" $color-accent-dark,
+  "white" $color-white,
+  "dark" $color-dark,
+  "grey-1" $color-grey-1,
+  "grey-2" $color-grey-2,
+  "grey-3" $color-grey-3,
+  "grey-4" $color-grey-4,
+  "grey-5" $color-grey-5,
+  "grey-6" $color-grey-6
+);
 
-.pad-min { padding: $sp-1 0; }
-.pad { padding: $sp-2 0; }
-.pad-max { padding: $sp-3 0; }
+@each $name, $color in $colors {
+  .bg-#{$name} {
+    background: $color !important;
+  }
+}
 
-.color-primario {
-  background-color: $color-principal;
+@each $name, $color in $colors {
+  .color-#{$name} {
+    color: $color;
+  }
 }
-.color-secundario {
-  background-color: $color-secundario;
+
+// Mides funcionals per a espais
+// ------------------------------------------------
+$sizes: (
+  "top" "t" "0" $space-0,
+  "top" "t" "1" $space-1,
+  "top" "t" "2" $space-2,
+  "top" "t" "3" $space-3,
+  "top" "t" "4" $space-4,
+  "top" "t" "5" $space-5,
+  "bottom" "b" "0" $space-0,
+  "bottom" "b" "1" $space-1,
+  "bottom" "b" "2" $space-2,
+  "bottom" "b" "3" $space-3,
+  "bottom" "b" "4" $space-4,
+  "bottom" "b" "5" $space-5
+);
+
+// loop top i bottom
+@each $direction, $d, $name, $size in $sizes {
+  .pad-#{$d}-#{$name} {
+    padding-#{$direction}: $size;
+    @media screen and (max-width: 575px) {
+      @if $size == $space-1 or $size == $space-2 {
+        padding-#{$direction}: $size !important;
+      } @else {
+        padding-#{$direction}: $size / 2 !important;
+      }
+    }
+  }
+  .mar-#{$d}-#{$name} {
+    margin-#{$direction}: $size;
+    @media screen and (max-width: 575px) {
+      @if $size == $space-1 or $size == $space-2 {
+        margin-#{$direction}: $size !important;
+      } @else {
+        margin-#{$direction}: $size / 2 !important;
+      }
+    }
+  }
 }
-.bg-primario {
-  background-color: $color-principal;
-}
-.bg-primario {
-  background-color: $color-secundario;
-}
-.bg-gris-light {
-  background-color: $color-gris-01;
+
+// loop top i bottom en y
+@each $direction, $d, $name, $size in $sizes {
+  .pad-#{$name} {
+    padding: $size 0;
+    @media screen and (max-width: 575px) {
+      padding: $size / 1.5 0 !important;
+    }
+  }
+  .mar-#{$name} {
+    margin: $size 0;
+    @media screen and (max-width: 575px) {
+      margin: $size / 1.5 0 !important;
+    }
+  }
 }

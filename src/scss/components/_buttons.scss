@@ -1,2 +1,52 @@
-/* SCSS Botones
---------------------------------------------------- */
+@mixin button {
+  padding: 1rem 1.475rem;
+  font-size: 1rem;
+  border-radius: 50px;
+  font-weight: $font-weight-normal;
+  text-align: center;
+  cursor: pointer;
+  border: 0;
+  transition: $trans;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-width: 1px;
+  border-style: solid;
+  &--lg {
+    padding: 18px 1.9375rem;
+    @media screen and (max-width: 767px) {
+      padding: 1rem 1.375rem;
+    }
+  }
+  &--sm {
+    padding: 0.725rem 1.25em;
+  }
+}
+
+.boton {
+  @include button;
+}
+
+$buttons: (
+  "primary" $color-primary $color-white,
+  "secondary" $color-secondary $color-white,
+  "accent" $color-accent $color-white,
+  "white" $color-white $color-grey-2,
+  "dark" $color-dark $color-white
+);
+
+@each $name, $c-background, $c-text in $buttons {
+  .boton--#{$name} {
+    background: $c-background;
+    color: $c-text;
+    border-color: $c-background;
+    transition: $trans;
+    &:hover {
+      color: $c-text;
+      box-shadow: $box-shadow-small;
+      transform: translateY(-2px);
+      transition: $trans;
+    }
+  }
+}

@@ -1,5 +1,5 @@
 # WP Starter PStudio
-WP Starter PStudio es la plantilla de inicio que usamos en [nuestro estudio](https://www.usehelvetica.net) para crear temas personalizados. Utiliza Bootstrap 4 y tiene integrado el Bootstrap Navwalker para gestionar la navegación. Funciona con wordpress a partir de la versión 4.
+WP Starter PStudio es la plantilla de inicio que usamos en [nuestro estudio](https://www.usehelvetica.net) para crear temas personalizados. Utiliza Bootstrap 5.
 
 ## Importante
 
@@ -14,13 +14,12 @@ David Pruñonosa
 
 Poco a poco vamos dejando de lado la dependencia de bootstrap, en las siguientes versiones desaparecera.
 
-* jQuery 3.3.1
-* Popper 1.14.3
+* jQuery 2.2.4
 * Fontawsome 5 (Open)
 * Menús con [Bootstrap Navwalker](https://github.com/wp-bootstrap/wp-bootstrap-navwalker) @wp-bootstrap
 * [Aos](https://github.com/michalsnik/aos) Animate on scroll library @michalsnik
 * Gulp.js: Sass y browserSync
-* Bootstrap 4.1.3
+* Bootstrap 5 beta 1
 
 
 ## Características Wordpress

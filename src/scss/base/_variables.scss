@@ -1,38 +1,68 @@
-// $color-principal: rgba(224, 210, 19, 1);
-// $color-secundario: rgba(124, 175, 129, 1);
-// $color-alternativo: rgba(124, 175, 129, 1);
+$color-primary: #ffc944;
+$color-primary-light: rgba(255, 201, 68, 0.15);
+$color-primary-dark: #e8b73e;
 
-$color-principal: #ff0066;
-$color-secundario: #06c9a2;
-$color-alternativo: #ff9500;
+$color-secondary: #ff447f;
+$color-secondary-light: #fe86ac;
+$color-secondary-dark: #c62256;
 
-// $color-gris-light: rgba(0, 0, 0, 0.1);
-// $color-gris: rgba(0, 0, 0, 0.5);
-// $color-gris-dark: rgba(0, 0, 0, 0.8);
+$color-accent: #5d50c6;
+$color-accent-light: rgba(93, 80, 198, 0.1);
+$color-accent-dark: #473d99;
 
-$color-gris-01: rgba(0, 0, 0, 0.1);
-$color-gris-02: rgba(0, 0, 0, 0.3);
-$color-gris-03: rgba(0, 0, 0, 0.8);
-$color-gris-04: rgba(0, 0, 0, 0.9);
+$color-white: #fff;
 
-$color-background: rgba(255, 255, 255, 1);
+$color-grey-1: #262626;
+$color-grey-2: #424142;
+$color-grey-3: #7f7f7f;
+$color-grey-4: #b6b6b6;
+$color-grey-5: #d7d7d7;
+$color-grey-6: #f5f5f5;
 
-$font-size-big: 1.2rem;
+$color-dark: #1e0028;
+$color-background: #fff;
+
+$color-text-body: $color-grey-2;
+$color-text-muted: $color-grey-4;
+
+$font-size-smaller: 0.75rem;
 $font-size: 1rem;
-$font-size-small: 0.8rem;
-$font-size-smaller: 0.7rem;
+$font-size-big: 1.125rem;
 
-$font-weight: 400;
+$font-weight-light: 200;
+$font-weight-normal: 400;
+$font-weight-bold: 600;
 
-$box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+$link: $color-accent;
 
-$border-radius: $font-size / 2;
+$box-shadow-small: 0px 0px 15px rgba(0, 0, 0, 0.1);
+$box-shadow: 0px 8px 16px rgba(30, 0, 40, 0.08) !important;
+$box-shadow-large: 0px 16px 48px rgba(30, 0, 40, 0.1);
+
+$typo-primary: "Work Sans";
+$typo-secondary: "Work Sans";
+
+$border-radius-min: 0.3rem;
+$border-radius: 0.625rem;
+$border-radius-cta: 2.5rem;
 
 $trans: 0.2s all ease-in-out;
 
-$sp-1: 2rem;
-$sp-2: 4rem;
-$sp-3: 8rem;
+$header-1: 3rem;
+$header-2: 2.18rem;
+$header-3: 1.5rem;
+$header-4: 1.25rem;
+$header-5: 1rem;
+$header-6: 0.87rem;
 
-$typo-principal: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$typo-secundaria: "Georgia", serif;
+$display-1: 6rem;
+$display-2: 4.35rem;
+$display-3: 3.45rem;
+$display-4: 2.18rem;
+
+$space-0: 0px;
+$space-1: 24px;
+$space-2: 40px;
+$space-3: 64px;
+$space-4: 80px;
+$space-5: 120px;

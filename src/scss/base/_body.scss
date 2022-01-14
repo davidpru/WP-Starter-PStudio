@@ -1,6 +1,15 @@
 body {
   background-color: $color-background;
   font-size: $font-size;
-  color: $color-gris-03;
-  font-weight: $font-weight;
+  color: $color-text-body;
+  font-weight: $font-weight-normal;
+}
+
+a {
+  color: $color-accent;
+  transition: $trans;
+  &:hover {
+    text-decoration: none;
+    transition: $trans;
+  }
 }
