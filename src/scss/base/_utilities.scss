@@ -59,9 +59,9 @@ $sizes: (
     padding-#{$direction}: $size;
     @media screen and (max-width: 575px) {
       @if $size == $space-1 or $size == $space-2 {
-        padding-#{$direction}: $size !important;
-      } @else {
         padding-#{$direction}: $size / 2 !important;
+      } @else {
+        padding-#{$direction}: $size !important;
       }
     }
   }
@@ -69,9 +69,9 @@ $sizes: (
     margin-#{$direction}: $size;
     @media screen and (max-width: 575px) {
       @if $size == $space-1 or $size == $space-2 {
-        margin-#{$direction}: $size !important;
-      } @else {
         margin-#{$direction}: $size / 2 !important;
+      } @else {
+        margin-#{$direction}: $size !important;
       }
     }
   }

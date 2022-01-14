@@ -43,6 +43,8 @@ $buttons: (
     border-color: $c-background;
     transition: $trans;
     &:hover {
+      background: darken($c-background, 5%);
+      border-color: darken($c-background, 5%);
       color: $c-text;
       box-shadow: $box-shadow-small;
       transform: translateY(-2px);
