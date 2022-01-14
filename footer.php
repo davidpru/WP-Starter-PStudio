@@ -32,28 +32,14 @@
 <?php wp_footer(); ?>
 <!-- Wp automatic footer -->
 
+<!-- Vendor -->
+<script src="<?php bloginfo('stylesheet_directory'); ?>/dist/vendor/jquery/jquery-3.6.0.min.js"></script>
+<script src="<?php bloginfo('stylesheet_directory'); ?>/dist/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-
-<!-- Jquery + Bootstrap -->
-<script src="<?php bloginfo('stylesheet_directory'); ?>/dist/js/jquery/jquery-2.2.4.min.js" ></script>
-<script src="<?php bloginfo('stylesheet_directory'); ?>/dist/js/bootstrap/bootstrap.bundle.min.js"></script>
-
-
-<!-- AOS -->
-<script src="<?php bloginfo('stylesheet_directory'); ?>/dist/js/aos/aos.js"></script>
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-<script>
-  AOS.init();
-</script>
-
-<!-- Main, personalizados -->
+<!-- Custom -->
 <script src="<?php bloginfo('stylesheet_directory'); ?>/dist/js/main.js" charset="utf-8"></script>
-
-<!-- Fontawsome -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
-
 
 
 </body>
+
 </html>

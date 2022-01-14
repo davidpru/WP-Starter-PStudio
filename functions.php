@@ -23,9 +23,9 @@ function theme_slug_widgets_init() {
     'name' => __( 'Blog', 'theme-slug' ),
     'id' => 'sidebar-blog',
     'description' => __( 'Widgets disponibles en el blog', 'theme-slug' ),
-    'before_widget' => '<section id="%1$s" class="widget widget--name %2$s">',
+    'before_widget' => '<section id="%1$s" class="widget-blog widget-blog--blog %2$s">',
     'after_widget'  => '</section>',
-    'before_title'  => '<h4 class="widget__title">',
+    'before_title'  => '<h4 class="widget-blog__title">',
     'after_title'   => '</h4>',
     ) );
 
@@ -45,9 +45,9 @@ function theme_slug_widgets_init() {
     'name' => __( 'Footer 1', 'theme-slug' ),
     'id' => 'sidebar-footer1',
     'description' => __( 'Widgets disponibles en el Footer', 'theme-slug' ),
-    'before_widget' => '<section id="%1$s" class="widget widget--footer %2$s">',
+    'before_widget' => '<section id="%1$s" class="widget-footer %2$s">',
     'after_widget'  => '</section>',
-    'before_title'  => '<h4 class="widget__title">',
+    'before_title'  => '<h4 class="widget-footer__title">',
     'after_title'   => '</h4>',
     ) );
 
@@ -55,9 +55,9 @@ function theme_slug_widgets_init() {
     'name' => __( 'Footer 2', 'theme-slug' ),
     'id' => 'sidebar-footer2',
     'description' => __( 'Widgets disponibles en el Footer', 'theme-slug' ),
-    'before_widget' => '<section id="%1$s" class="widget widget--footer %2$s">',
+    'before_widget' => '<section id="%1$s" class="widget-footer %2$s">',
     'after_widget'  => '</section>',
-    'before_title'  => '<h4 class="widget__title">',
+    'before_title'  => '<h4 class="widget-footer__title">',
     'after_title'   => '</h4>',
     ) );
 
@@ -65,9 +65,9 @@ function theme_slug_widgets_init() {
     'name' => __( 'Footer 3', 'theme-slug' ),
     'id' => 'sidebar-footer3',
     'description' => __( 'Widgets disponibles en el Footer', 'theme-slug' ),
-    'before_widget' => '<section id="%1$s" class="widget widget--footer %2$s">',
+    'before_widget' => '<section id="%1$s" class="widget-footer %2$s">',
     'after_widget'  => '</section>',
-    'before_title'  => '<h4 class="widget__title">',
+    'before_title'  => '<h4 class="widget-footer__title">',
     'after_title'   => '</h4>',
     ) );
 
@@ -75,9 +75,9 @@ function theme_slug_widgets_init() {
     'name' => __( 'Footer 4', 'theme-slug' ),
     'id' => 'sidebar-footer4',
     'description' => __( 'Widgets disponibles en el Footer', 'theme-slug' ),
-    'before_widget' => '<section id="%1$s" class="widget widget--footer %2$s">',
+    'before_widget' => '<section id="%1$s" class="widget-footer %2$s">',
     'after_widget'  => '</section>',
-    'before_title'  => '<h4 class="widgettitle">',
+    'before_title'  => '<h4 class="widget-footer__title">',
     'after_title'   => '</h4>',
     ) );
 

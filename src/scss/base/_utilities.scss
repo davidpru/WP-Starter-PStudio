@@ -58,8 +58,8 @@ $sizes: (
   .pad-#{$d}-#{$name} {
     padding-#{$direction}: $size;
     @media screen and (max-width: 575px) {
-      @if $size == $space-1 or $size == $space-2 {
-        padding-#{$direction}: $size / 2 !important;
+      @if ($space-1) or ($space-2) {
+        padding-#{$direction}: $size / 1.5 !important;
       } @else {
         padding-#{$direction}: $size !important;
       }
@@ -68,8 +68,8 @@ $sizes: (
   .mar-#{$d}-#{$name} {
     margin-#{$direction}: $size;
     @media screen and (max-width: 575px) {
-      @if $size == $space-1 or $size == $space-2 {
-        margin-#{$direction}: $size / 2 !important;
+      @if ($space-1) or ($space-2) {
+        margin-#{$direction}: ($size / 1.5) !important;
       } @else {
         margin-#{$direction}: $size !important;
       }
@@ -82,7 +82,7 @@ $sizes: (
   .pad-#{$name} {
     padding: $size 0;
     @media screen and (max-width: 575px) {
-      @if $size == $space-1 or $size == $space-2 {
+      @if ($space-1) or ($space-2) {
         padding: $size / 1.5 0 !important;
       } @else {
         padding: $size 0 !important;
@@ -92,7 +92,7 @@ $sizes: (
   .mar-#{$name} {
     margin: $size 0;
     @media screen and (max-width: 575px) {
-      @if $size == $space-1 or $size == $space-2 {
+      @if ($space-1) or ($space-2) {
         margin: $size / 1.5 0 !important;
       } @else {
         margin: $size 0 !important;

@@ -1,3 +1,5 @@
+@import "../../dist/vendor/bootstrap/scss/bootstrap.scss";
+
 @import "base/variables";
 @import "base/body";
 @import "base/utilities";
@@ -8,7 +10,7 @@
 @import "layout/footer";
 @import "layout/nav";
 
-@import "components/storybook";
+@import "components/storybook"; // borrar para producción
 @import "components/page-title";
 @import "components/buttons";
 @import "components/articles";

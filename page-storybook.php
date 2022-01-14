@@ -14,7 +14,9 @@
       <h2 class="header-1">
         Colores / Backgrounds
       </h2>
-      <p>.color-$color / .bg-$color</p>
+      <div class="card">
+        <div class="card-body">.color-$color / .bg-$color</div>
+      </div>
       <hr>
 
       <div class="scolor d-flex">
@@ -121,19 +123,19 @@
       <hr>
 
       <div class="sespacio sespacio--1 bg-grey-5 pad-t-1 mar-b-1">
-        space-1
+
       </div>
       <div class="sespacio sespacio--2 bg-grey-5 pad-t-2 mar-b-1">
-        space-2
+
       </div>
       <div class="sespacio sespacio--3 bg-grey-5 pad-t-3 mar-b-1">
-        space-3
+
       </div>
       <div class="sespacio sespacio--4 bg-grey-5 pad-t-4 mar-b-1">
-        space-4
+
       </div>
       <div class="sespacio sespacio--5 bg-grey-5 pad-t-5 mar-b-1">
-        space-5
+
       </div>
 
     </div>
@@ -216,6 +218,78 @@
         </a>
         <a href="#" class="boton boton--dark boton--lg">
           Button dark (lg)
+        </a>
+      </div>
+
+      <div class="mb-3">
+        <a href="#" class="boton boton--whatsapp">
+          Button WhatsApp
+        </a>
+        <a href="#" class="boton boton--whatsapp boton--sm">
+          Button WhatsApp (sm)
+        </a>
+        <a href="#" class="boton boton--whatsapp boton--lg">
+          Button WhatsApp (lg)
+        </a>
+      </div>
+
+      <div class="mb-3">
+        <a href="#" class="boton boton--primary-outline">
+          Button primary
+        </a>
+        <a href="#" class="boton boton--primary-outline boton--sm">
+          Button primary (sm)
+        </a>
+        <a href="#" class="boton boton--primary-outline boton--lg">
+          Button primary (lg)
+        </a>
+      </div>
+
+      <div class="mb-3">
+        <a href="#" class="boton boton--secondary-outline">
+          Button secondary
+        </a>
+        <a href="#" class="boton boton--secondary-outline boton--sm">
+          Button secondary (sm)
+        </a>
+        <a href="#" class="boton boton--secondary-outline boton--lg">
+          Button secondary (lg)
+        </a>
+      </div>
+
+      <div class="mb-3">
+        <a href="#" class="boton boton--accent-outline">
+          Button accent
+        </a>
+        <a href="#" class="boton boton--accent-outline boton--sm">
+          Button accent (sm)
+        </a>
+        <a href="#" class="boton boton--accent-outline boton--lg">
+          Button accent (lg)
+        </a>
+      </div>
+
+      <div class="mb-3">
+        <a href="#" class="boton boton--dark-outline">
+          Button dark
+        </a>
+        <a href="#" class="boton boton--dark-outline boton--sm">
+          Button dark (sm)
+        </a>
+        <a href="#" class="boton boton--dark-outline boton--lg">
+          Button dark (lg)
+        </a>
+      </div>
+
+      <div class="mb-3">
+        <a href="#" class="boton boton--whatsapp-outline">
+          Button WhatsApp
+        </a>
+        <a href="#" class="boton boton--whatsapp-outline boton--sm">
+          Button WhatsApp (sm)
+        </a>
+        <a href="#" class="boton boton--whatsapp-outline boton--lg">
+          Button WhatsApp (lg)
         </a>
       </div>
 

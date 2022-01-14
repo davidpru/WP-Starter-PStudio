@@ -21,6 +21,9 @@ $color-white: #fff;
 $color-dark: #1e0028;
 $color-background: $color-white;
 
+$color-whatsapp-dark: #128c7e;
+$color-whatsapp-light: #25d366;
+
 $color-text-body: $color-grey-2;
 $color-text-muted: $color-grey-4;
 
@@ -31,6 +34,7 @@ $font-size-big: 1.125rem;
 
 $font-weight-light: 200;
 $font-weight-normal: 400;
+$font-weight-medium: 500;
 $font-weight-bold: 600;
 
 $link: $color-accent;
@@ -58,11 +62,11 @@ $display-3: 3.45rem;
 $display-4: 2.18rem;
 
 $space-0: 0px;
-$space-1: 24px;
-$space-2: 40px;
-$space-3: 64px;
-$space-4: 80px;
-$space-5: 120px;
+$space-1: 1.5rem;
+$space-2: 2.5rem;
+$space-3: 4rem;
+$space-4: 5rem;
+$space-5: 7.5rem;
 
 $typo-primary: "Work Sans";
 $typo-secondary: "Work Sans";
