@@ -82,13 +82,21 @@ $sizes: (
   .pad-#{$name} {
     padding: $size 0;
     @media screen and (max-width: 575px) {
-      padding: $size / 1.5 0 !important;
+      @if $size == $space-1 or $size == $space-2 {
+        padding: $size / 1.5 0 !important;
+      } @else {
+        padding: $size 0 !important;
+      }
     }
   }
   .mar-#{$name} {
     margin: $size 0;
     @media screen and (max-width: 575px) {
-      margin: $size / 1.5 0 !important;
+      @if $size == $space-1 or $size == $space-2 {
+        margin: $size / 1.5 0 !important;
+      } @else {
+        margin: $size 0 !important;
+      }
     }
   }
 }
