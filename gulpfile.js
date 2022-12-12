@@ -1,59 +1,106 @@
-var gulp          = require('gulp');
-var browserSync   = require('browser-sync');
-var reload        = browserSync.reload;
-var autoPrefixer  = require('gulp-autoprefixer');
-var sass          = require('gulp-sass');
-var sourcemaps    = require('gulp-sourcemaps');
+// Requires Gulp v4.
+// $ npm uninstall --global gulp gulp-cli
+// $ rm /usr/local/share/man/man1/gulp.1
+// $ npm install --global gulp-cli
+// $ npm install
+const { src, dest, watch, series, parallel } = require('gulp');
+const browsersync = require('browser-sync').create();
+const sass = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
+const sourcemaps = require('gulp-sourcemaps');
+const plumber = require('gulp-plumber');
+const sasslint = require('gulp-sass-lint');
+const cache = require('gulp-cached');
+const notify = require('gulp-notify');
+const beeper = require('beeper');
 
+// Compile CSS from Sass.
+function buildStyles() {
+  return src('./src/scss/*.scss')
+    .pipe(plumbError()) // Global error handler through all pipes.
+    .pipe(sourcemaps.init())
+    .pipe(sass({ outputStyle: 'compressed' }))
+    .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7']))
+    .pipe(sourcemaps.write())
+    .pipe(dest('dist/css'))
+    .pipe(browsersync.reload({ stream: true }));
+}
 
-// browser-sync tarea para lanzar el server .
-gulp.task('browser-sync', function() {
+// Watch changes on all *.scss files, lint them and
+// trigger buildStyles() at the end.
+function watchFiles() {
+  watch(
+    ['src/scss/*.scss', 'src/scss/**/*.scss'],
+    { events: 'all', ignoreInitial: false },
+    // series(sassLint, buildStyles)
+    series(buildStyles)
+  );
+}
+
+// Init BrowserSync.
+function browserSync(done) {
+
   //watch files
-  var files = [
-  '.dist/css/*.css',
-  '.dist/js/*.js',
-  './*.js',
-  './*/*.php',
-  './*.php',
-  './src/scss/*.scss',
-  './src/scss/*/*.scss'
+  const files = [
+    ".dist/css/*.css",
+    ".dist/js/*.js",
+    ".dist/js/*/*.js",
+    ".dist/*/*/*.js",
+    "./*.js",
+    "./*/*.js",
+    "./*/*/*.js",
+    "./*/*.php",
+    "./*.php",
+    "./src/scss/*.scss",
+    "./src/scss/*/*.scss",
   ];
 
-  //initialize browsersync
-  browserSync.init(files, {
+  browsersync.init(files, {
+    proxy: 'http://pstudio.loc/', // Change this value to match your local URL.
+    socket: {
+      domain: 'localhost:3000'
+    }
+  });
+  done();
+}
 
-  //browsersync with a php server
-  proxy: "http://starter-theme.loc/",
-  notify: false
+// Init Sass linter.
+function sassLint() {
+  return src(['src/scss/*.scss', 'src/scss/**/*.scss'])
+    .pipe(cache('sasslint'))
+    .pipe(sasslint({
+      // configFile: '/.sass-lint.yml',
+      ignore: '/dist/vendor/bootstrap/scss/bootstrap.scss',
+      rules: {
+        'property-sort-order': false,
+        'quotes': false,
+        'class-name-format': 'bemstrict',
+        'leading-zero': 'always',
+      }
+    }))
+    .pipe(sasslint.format())
+    .pipe(sasslint.failOnError());
+}
 
-   // server: {
-   //   baseDir: "./"
-   //   }
+// Error handler.
+function plumbError() {
+  return plumber({
+    errorHandler: function (err) {
+      notify.onError({
+        templateOptions: {
+          date: new Date()
+        },
+        title: "Gulp error in " + err.plugin,
+        message: err.formatted
+      })(err);
+      beeper();
+      this.emit('end');
+    }
+  })
+}
 
- });
-});
-
-// Sass task, will run when any SCSS files change & BrowserSync
-// will auto-update browsers
-gulp.task('sass', function () {
-  return gulp.src('./src/scss/*.scss')
-  .pipe(sourcemaps.init())
-    .pipe(sass({ outputStyle: 'nested' })
-      .on('error', sass.logError)
-      )
-      .pipe(
-        autoPrefixer({
-          // overrideBrowserslist: ['last 2 versions', 'ie >= 11'],
-          cascade: false,
-        })
-      )
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./dist/css/'))
-    .pipe(reload({ stream:true }));
-});
-
-// Default task to be run with `gulp`
-gulp.task('default', ['sass', 'browser-sync'], function () {
-  gulp.watch("./src/scss/*/*.scss", ['sass']);
-  gulp.watch("./src/scss/*.scss", ['sass']);
-});
+// Export commands.
+exports.default = parallel(browserSync, watchFiles); // $ gulp
+exports.sass = buildStyles; // $ gulp sass
+exports.watch = watchFiles; // $ gulp watch
+exports.build = series(buildStyles); // $ gulp build
