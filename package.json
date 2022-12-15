@@ -30,7 +30,7 @@
     "gulp-cached": "^1.1.1",
     "gulp-notify": "^4.0.0",
     "gulp-plumber": "^1.2.1",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^5.1.0",
     "gulp-sass-lint": "^1.4.0",
     "gulp-shell": "^0.6.5",
     "gulp-sourcemaps": "^2.6.4",
