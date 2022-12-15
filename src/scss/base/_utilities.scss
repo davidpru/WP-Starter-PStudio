@@ -59,7 +59,7 @@ $sizes: (
     padding-#{$direction}: $size;
     @media screen and (max-width: 575px) {
       @if ($space-1) or ($space-2) {
-        padding-#{$direction}: $size / 1.5 !important;
+        padding-#{$direction}: calc($size / 1.5) !important;
       } @else {
         padding-#{$direction}: $size !important;
       }
@@ -69,7 +69,7 @@ $sizes: (
     margin-#{$direction}: $size;
     @media screen and (max-width: 575px) {
       @if ($space-1) or ($space-2) {
-        margin-#{$direction}: ($size / 1.5) !important;
+        margin-#{$direction}: calc($size / 1.5) !important;
       } @else {
         margin-#{$direction}: $size !important;
       }
@@ -83,7 +83,7 @@ $sizes: (
     padding: $size 0;
     @media screen and (max-width: 575px) {
       @if ($space-1) or ($space-2) {
-        padding: $size / 1.5 0 !important;
+        padding: calc($size / 1.5) 0 !important;
       } @else {
         padding: $size 0 !important;
       }
@@ -93,7 +93,7 @@ $sizes: (
     margin: $size 0;
     @media screen and (max-width: 575px) {
       @if ($space-1) or ($space-2) {
-        margin: $size / 1.5 0 !important;
+        margin: calc($size / 1.5) 0 !important;
       } @else {
         margin: $size 0 !important;
       }

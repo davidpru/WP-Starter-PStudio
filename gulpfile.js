@@ -14,6 +14,8 @@ const cache = require('gulp-cached');
 const notify = require('gulp-notify');
 const beeper = require('beeper');
 
+sass.compiler = require('sass');
+
 // Compile CSS from Sass.
 function buildStyles() {
   return src('./src/scss/*.scss')
