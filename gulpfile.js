@@ -1,47 +1,41 @@
-// Requires Gulp v4.
-// $ npm uninstall --global gulp gulp-cli
-// $ rm /usr/local/share/man/man1/gulp.1
-// $ npm install --global gulp-cli
-// $ npm install
-const { src, dest, watch, series, parallel } = require('gulp');
-const browsersync = require('browser-sync').create();
-const sass = require('gulp-sass');
-const autoprefixer = require('gulp-autoprefixer');
-const sourcemaps = require('gulp-sourcemaps');
-const plumber = require('gulp-plumber');
-const sasslint = require('gulp-sass-lint');
-const cache = require('gulp-cached');
-const notify = require('gulp-notify');
-const beeper = require('beeper');
+const { src, dest, watch, series, parallel } = require("gulp");
+const gulp = require('gulp');
+const browsersync = require("browser-sync").create();
+const sass = require('gulp-sass')(require('sass'));
+const sourcemaps = require("gulp-sourcemaps");
+const plumber = require("gulp-plumber");
+const notify = require("gulp-notify");
+const beeper = require("beeper");
+const autoprefixer = require("gulp-autoprefixer");
 
-sass.compiler = require('sass');
+sass.compiler = require("sass");
 
-// Compile CSS from Sass.
+const BROWSERSLIST = ['> 5.5%', 'last 2 versions', 'Firefox ESR', 'not dead'];
+
+// Compilar CSS desde SASS o SCSS.
 function buildStyles() {
-  return src('./src/scss/*.scss')
+  return src("src/scss/**/*.scss")
     .pipe(plumbError()) // Global error handler through all pipes.
     .pipe(sourcemaps.init())
-    .pipe(sass({ outputStyle: 'compressed' }))
-    .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7']))
-    .pipe(sourcemaps.write())
-    .pipe(dest('dist/css'))
+    .pipe(sass({ outputStyle: "expanded" }))
+    .pipe(autoprefixer())
+    .pipe(sourcemaps.write('map'))
+    .pipe(dest("dist/css"))
+
     .pipe(browsersync.reload({ stream: true }));
 }
 
-// Watch changes on all *.scss files, lint them and
-// trigger buildStyles() at the end.
 function watchFiles() {
   watch(
-    ['src/scss/*.scss', 'src/scss/**/*.scss'],
-    { events: 'all', ignoreInitial: false },
+    ["src/scss/**/*.scss"],
+    { events: "all", ignoreInitial: false },
     // series(sassLint, buildStyles)
     series(buildStyles)
   );
 }
 
-// Init BrowserSync.
+// Init BrowserSync
 function browserSync(done) {
-
   //watch files
   const files = [
     ".dist/css/*.css",
@@ -58,30 +52,21 @@ function browserSync(done) {
   ];
 
   browsersync.init(files, {
-    proxy: 'http://pstudio.loc/', // Change this value to match your local URL.
+    // Trabajando con carpeta local
+    // server: {
+    //   baseDir: "./"
+    // },
+
+    // Añadir url para proxy, en caso de trabajar con host. 
+    proxy: "https://www.prunonosa.dev/",
+
+    // Socket, este no cambia
     socket: {
-      domain: 'localhost:3000'
-    }
+      domain: "localhost:3000",
+
+    },
   });
   done();
-}
-
-// Init Sass linter.
-function sassLint() {
-  return src(['src/scss/*.scss', 'src/scss/**/*.scss'])
-    .pipe(cache('sasslint'))
-    .pipe(sasslint({
-      // configFile: '/.sass-lint.yml',
-      ignore: '/dist/vendor/bootstrap/scss/bootstrap.scss',
-      rules: {
-        'property-sort-order': false,
-        'quotes': false,
-        'class-name-format': 'bemstrict',
-        'leading-zero': 'always',
-      }
-    }))
-    .pipe(sasslint.format())
-    .pipe(sasslint.failOnError());
 }
 
 // Error handler.
@@ -90,18 +75,20 @@ function plumbError() {
     errorHandler: function (err) {
       notify.onError({
         templateOptions: {
-          date: new Date()
+          date: new Date(),
         },
         title: "Gulp error in " + err.plugin,
-        message: err.formatted
+        message: err.formatted,
       })(err);
       beeper();
-      this.emit('end');
-    }
-  })
+      this.emit("end");
+    },
+  });
 }
 
-// Export commands.
+
+
+
 exports.default = parallel(browserSync, watchFiles); // $ gulp
 exports.sass = buildStyles; // $ gulp sass
 exports.watch = watchFiles; // $ gulp watch

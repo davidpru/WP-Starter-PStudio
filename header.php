@@ -19,8 +19,10 @@
     endif; ?>
 
   <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/dist/vendor/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/dist/css/master.css">
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/style.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 
   <!-- Automatic Wordpress ////////////////////////////////// -->
   <?php wp_head(); ?>

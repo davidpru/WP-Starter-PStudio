@@ -33,7 +33,9 @@
 <!-- Wp automatic footer -->
 
 <!-- Vendor -->
-<script src="<?php bloginfo('stylesheet_directory'); ?>/dist/vendor/jquery/jquery-3.6.0.min.js"></script>
+<!-- <script src="<?php bloginfo('stylesheet_directory'); ?>/dist/vendor/jquery/jquery-3.7.1.min.js"></script> -->
+<script src="<?php bloginfo('stylesheet_directory'); ?>/dist/vendor/jquery/jquery-4.0.0-beta.2.min.js"></script>
+
 <script src="<?php bloginfo('stylesheet_directory'); ?>/dist/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <!-- Custom -->

@@ -1,52 +1,20 @@
 {
-  "name": "pstudio",
-  "version": "1.0.0",
-  "description": "Plantilla de inicio para Wordpress con Bootstrap 5",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/davidpru/WP-Starter-PStudio.git"
-  },
-  "keywords": [
-    "wordpress",
-    "starter",
-    "theme"
-  ],
-  "author": "David Pruñonosa",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/davidpru/WP-Starter-PStudio/issues"
-  },
-  "homepage": "https://github.com/davidpru/WP-Starter-PStudio#readme",
-  "dependencies": {
-    "autoprefixer": "^9.4.6",
-    "beeper": "^1.1.1",
-    "browser-sync": "^2.26.3",
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-cached": "^1.1.1",
+  "devDependencies": {
+    "browser-sync": "^3.0.2",
+    "gulp": "^5.0.0",
+    "gulp-autoprefixer": "^8.0.0",
     "gulp-notify": "^4.0.0",
     "gulp-plumber": "^1.2.1",
-    "gulp-sass": "^4.0.2",
-    "gulp-sass-lint": "^1.4.0",
-    "gulp-shell": "^0.6.5",
-    "gulp-sourcemaps": "^2.6.4",
-    "sass": "^1.56.2"
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "sass": "^1.77.8"
+  },
+  "dependencies": {
+    "beeper": "^2.1.0"
   },
   "browserslist": [
-    "> 1%",
-    "ie >= 8",
-    "edge >= 15",
-    "ie_mob >= 10",
-    "ff >= 45",
-    "chrome >= 45",
-    "safari >= 7",
-    "opera >= 23",
-    "ios >= 7",
-    "android >= 4",
-    "bb >= 10"
+    "last 1 version",
+    "> 5%",
+    "not dead"
   ]
 }
